@@ -30,6 +30,13 @@ app.post(
         const { body } = req;
         const { conversation } = body;
 
+        // body
+        // {
+        //  conversation: [
+        //      {role: '' { 'user' | 'model' }, text}
+        //  ] cek role-nya 
+        // }
+
         // guard clause -- satpam
         if (!conversation || !Array.isArray(conversation)) {
             res.status(400).json({
